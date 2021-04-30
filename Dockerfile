@@ -11,6 +11,7 @@ ARG TZ=Asia/Shanghai
 ENV TZ=$TZ
 
 # 镜像变量
+ARG BUILD_FROM=arm64v8
 ARG DOCKER_IMAGE=karteous/proxypool
 ENV DOCKER_IMAGE=$DOCKER_IMAGE
 ARG DOCKER_IMAGE_OS=golang
