@@ -117,7 +117,7 @@ COPY ./conf/proxypool/source.yaml /proxypool-src/conf/proxypool/source.yaml
 
 # 安装dumb-init
 RUN set -eux \
-    && wget --no-check-certificate https://github.com/Yelp/dumb-init/releases/download/v${DUMBINIT_VERSION}/dumb-init_${DUMBINIT_VERSION}_arm64 -O /usr/bin/dumb-init \
+    && wget --no-check-certificate https://github.com/Yelp/dumb-init/releases/download/v${DUMBINIT_VERSION}/dumb-init_${DUMBINIT_VERSION}_x86_64 -O /usr/bin/dumb-init \
     && chmod +x /usr/bin/dumb-init
 
 # 容器信号处理
