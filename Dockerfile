@@ -11,7 +11,7 @@ ARG TZ=Asia/Shanghai
 ENV TZ=$TZ
 
 # 镜像变量
-ARG DOCKER_IMAGE=danxiaonuo/proxypool
+ARG DOCKER_IMAGE=karteous/proxypool
 ENV DOCKER_IMAGE=$DOCKER_IMAGE
 ARG DOCKER_IMAGE_OS=golang
 ENV DOCKER_IMAGE_OS=$DOCKER_IMAGE_OS
@@ -44,7 +44,7 @@ RUN set -eux \
 # 运行工作目录
 WORKDIR /build
 # 克隆源码运行安装
-RUN git clone --depth=1 --progress https://github.com/danxiaonuo/proxypool.git /src && \
+RUN git clone --depth=1 --progress https://github.com/3wking/proxypool.git /src && \
     cd /src && go mod download && make docker
 # ##############################################################################
 
